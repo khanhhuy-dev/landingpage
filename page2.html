@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="favicon.svg" />
+
+  <!-- Primary SEO -->
+  <title>QuickPayly – Get Your Personal Loan Up To $5,000</title>
+  <meta name="description"
+    content="Get your personal loan up to $5,000. Fast approval, lower monthly payments. Submit a request in minutes and receive funds in 24 hours." />
+  <meta name="keywords"
+    content="personal loan, $5000 loan, fast approval, quick loan, lower monthly payments, QuickPayly" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://quickpayly.com/personal-loan" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quickpayly.com/personal-loan" />
+  <meta property="og:title" content="QuickPayly – Get Your Personal Loan Up To $5,000" />
+  <meta property="og:description" content="Fast approval, lower monthly payments. Get your money in 24 hours." />
+  <meta property="og:image" content="https://quickpayly.com/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QuickPayly – Get Your Personal Loan Up To $5,000" />
+  <meta name="twitter:description" content="Fast approval, lower monthly payments. Get your money in 24 hours." />
+  <meta name="twitter:image" content="https://quickpayly.com/images/og-image.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS (shared build) -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="image" href="images/hero-banner.png" />
+
+  <style>
+    * { font-family: 'Montserrat', sans-serif; }
+    .how-bg { background:#f9fafe; }
+
+    .step-top { background:#0d2461; border-radius:6px 6px 0 0; padding:10px; display:flex; flex-direction:row; align-items:center; gap:6px; }
+    .step-bottom { background:#dbeeff; border-radius:0 0 6px 6px; padding:8px; }
+    .step-bottom p { color:#6b7280; }
+
+    .cta-green { background:linear-gradient(90deg,#4ade80 0%,#22c55e 50%,#16a34a 100%); box-shadow:0 5px 0 #15803d,0 8px 18px rgba(21,128,61,0.30); transition:all 0.12s ease; }
+    .cta-green:active { box-shadow:0 2px 0 #15803d; transform:translateY(3px); }
+
+    #popupOverlay { position:fixed; inset:0; z-index:999; background:rgba(0,0,0,0.55); display:flex; align-items:center; justify-content:center; padding:16px; }
+    #popupOverlay.hidden { display:none; }
+    #popupBox { position:relative; width:100%; max-width:400px; }
+    #popupBox img { width:100%; height:auto; display:block; border-radius:16px; cursor:pointer; }
+
+    .rv { opacity:0; transform:translateY(22px); transition:opacity 0.52s ease,transform 0.52s ease; }
+    .rv.visible { opacity:1; transform:translateY(0); }
+    .rv-d1 { transition-delay:0.12s; }
+    .rv-d2 { transition-delay:0.24s; }
+    @media (prefers-reduced-motion:reduce) { .rv { opacity:1; transform:none; transition:none; } }
+  </style>
+</head>
+
+<body class="overflow-x-hidden" style="background:#eef2f7">
+  <div class="w-full max-w-[430px] mx-auto relative bg-white min-h-screen"
+    style="box-shadow: 0 0 40px rgba(13,36,97,0.10)">
+
+    <header
+      class="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100 bg-white relative z-10">
+      <div class="flex items-center gap-2">
+        <img src="images/logo.svg" width="40" height="42" alt="QuickPayly shield logo" />
+        <div class="leading-none">
+          <span class="text-[1.25rem] font-bold tracking-wide" style="color:#0ea5e9">QUICK</span><span
+            class="text-[1.25rem] font-black tracking-wide" style="color:#0d2461">PAYLY</span>
+        </div>
+      </div>
+      <button aria-label="Open menu" class="flex flex-col gap-[5px] p-2">
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+      </button>
+    </header>
+
+    <section>
+      <img src="images/hero-banner.png" alt="Get Your Personal Loan Up To $5,000"
+        fetchpriority="high" decoding="async"
+        style="display:block; width:100%; height:auto" />
+    </section>
+
+    <section class="how-bg px-4 sm:px-5 pt-8 pb-4">
+
+      <h2 class="rv font-black text-center mb-2" style="color:#0d2461; font-size:clamp(1.35rem,6vw,1.72rem)">
+        How It Works
+      </h2>
+      <p class="rv text-center leading-relaxed mb-7" style="color:#6b7280; font-size:clamp(0.72rem,3vw,0.85rem)">
+        The process is super fast and simple. It takes minutes to see results and enjoy your extra cash
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px">
+
+        <div class="rv">
+          <div class="step-top">
+            <span class="font-black text-white" style="font-size:1.1rem; line-height:1; flex-shrink:0">01</span>
+            <span class="font-bold text-white" style="font-size:clamp(0.6rem,2.6vw,0.7rem); line-height:1.35">Submit A
+              Request</span>
+          </div>
+          <div class="step-bottom">
+            <p style="color:#6b7280; font-size:clamp(0.58rem,2.4vw,0.65rem); line-height:1.55">
+              Fill in the quick and secure online form with your details—it takes less than 5 minutes.
+            </p>
+          </div>
+        </div>
+
+        <div class="rv rv-d1">
+          <div class="step-top">
+            <span class="font-black text-white" style="font-size:1.1rem; line-height:1; flex-shrink:0">02</span>
+            <span class="font-bold text-white" style="font-size:clamp(0.6rem,2.6vw,0.7rem); line-height:1.35">Check The
+              Offers</span>
+          </div>
+          <div class="step-bottom">
+            <p style="color:#6b7280; font-size:clamp(0.58rem,2.4vw,0.65rem); line-height:1.55">
+              View clear offers from multiple lenders and choose the one that suits you best.
+            </p>
+          </div>
+        </div>
+
+        <div class="rv rv-d2">
+          <div class="step-top">
+            <span class="font-black text-white" style="font-size:1.1rem; line-height:1; flex-shrink:0">03</span>
+            <span class="font-bold text-white" style="font-size:clamp(0.6rem,2.6vw,0.7rem); line-height:1.35">Get Your
+              Money</span>
+          </div>
+          <div class="step-bottom">
+            <p style="color:#6b7280; font-size:clamp(0.58rem,2.4vw,0.65rem); line-height:1.55">
+              Sign the agreement and receive funds directly in your account, often within 24 hours.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-8 mb-2">
+        <a href="https://app.quickpayly.com/offer"
+          class="cta-green text-white font-black rounded-full inline-block px-12 py-4"
+          style="font-size:clamp(1rem,4.5vw,1.15rem)">
+          Get Started
+        </a>
+      </div>
+
+    </section>
+
+    <section class="bg-white">
+      <img src="images/bottom-banner.png" alt="Lower Monthly Payments and Fast Approval on your phone"
+        loading="lazy" decoding="async"
+        style="display:block; width:100%; height:auto" />
+    </section>
+
+    <div class="px-4 pb-8 pt-3 bg-white">
+      <p class="text-center leading-relaxed" style="color:#0d2461; font-size:clamp(0.65rem,2.8vw,0.78rem)">
+        <strong>Disclaimer:</strong> <em>Rates vary by lender and applicant qualifications. Not all applicants will
+          qualify for the lowest rates.</em>
+      </p>
+    </div>
+
+  </div><!-- /page wrapper -->
+
+  <div id="popupOverlay">
+    <div id="popupBox">
+      <img src="images/popup1.png" alt="What matters most to you?" id="popupImg"
+        loading="eager" decoding="async" />
+    </div>
+  </div>
+
+  <script defer>
+    function closePopup() {
+      document.getElementById('popupOverlay').classList.add('hidden');
+    }
+    document.getElementById('popupOverlay').addEventListener('click', closePopup);
+    document.getElementById('popupImg').addEventListener('click', function(e) {
+      e.stopPropagation();
+      closePopup();
+    });
+
+    const rvEls = document.querySelectorAll('.rv');
+    const rvObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          rvObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    rvEls.forEach(el => rvObs.observe(el));
+  </script>
+</body>
+
+</html>
