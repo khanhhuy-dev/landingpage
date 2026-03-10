@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#cce8f5" rx="100"/>
+  <!-- head -->
+  <circle cx="100" cy="76" r="38" fill="#5a9ab5"/>
+  <!-- hair highlight (female) -->
+  <ellipse cx="100" cy="56" rx="28" ry="14" fill="#3d7a95" opacity="0.45"/>
+  <!-- body / shoulders -->
+  <path d="M18 200 Q28 148 100 148 Q172 148 182 200 Z" fill="#5a9ab5"/>
+</svg>

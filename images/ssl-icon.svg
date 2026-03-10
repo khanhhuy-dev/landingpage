@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+  <!-- Shield: flat top with ear notches, rounded bottom point -->
+  <path d="M5 6 Q5 4 7 4 L8.5 4 Q10 4 10 5.5 L10 4 L28 4 L28 5.5 Q28 4 29.5 4 L31 4 Q33 4 33 6 L33 16 Q33 27 19 34 Q5 27 5 16 Z" fill="white" stroke="#9ca3af" stroke-width="1.8" stroke-linejoin="round"/>
+  <text x="19" y="22" text-anchor="middle" font-size="9" fill="#6b7280" font-weight="800" font-family="Montserrat,Arial,sans-serif" letter-spacing="0.5">SSL</text>
+</svg>

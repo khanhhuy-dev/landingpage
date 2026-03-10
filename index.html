@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="favicon.svg" />
+
+  <!-- Primary SEO -->
+  <title>QuickPayly – Find the Loan That Fits Your Life</title>
+  <meta name="description" content="Join 1252+ people who found their perfect loan match. No prepayment penalties, APR from 4.99%–23.99%, flexible terms 6–72 months. See your offer today." />
+  <meta name="keywords" content="personal loan, quick loan, low APR loan, flexible loan terms, no prepayment penalty, QuickPayly" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://quickpayly.com/" />
+
+  <!-- Open Graph (Facebook / Zalo / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quickpayly.com/" />
+  <meta property="og:title" content="QuickPayly – Find the Loan That Fits Your Life" />
+  <meta property="og:description" content="No hard pull. No hidden fees. APR from 4.99% to 23.99%. Get your offer in minutes." />
+  <meta property="og:image" content="https://quickpayly.com/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QuickPayly – Find the Loan That Fits Your Life" />
+  <meta name="twitter:description" content="No hard pull. No hidden fees. APR from 4.99% to 23.99%." />
+  <meta name="twitter:image" content="https://quickpayly.com/images/og-image.jpg" />
+
+  <!-- Performance: preconnect to font origin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <!-- Local Tailwind CSS (production build, purged & minified) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    * { font-family: 'Montserrat', sans-serif; }
+
+    /* CTA Button */
+    .cta-btn {
+      background: linear-gradient(90deg, #38d4ec 0%, #0ea5e9 55%, #0280c4 100%);
+      box-shadow: 0 7px 0 #01528a, 0 8px 16px rgba(2,132,199,0.35);
+      transition: all 0.12s;
+    }
+    .cta-btn:active {
+      box-shadow: 0 2px 0 #01528a;
+      transform: translateY(5px);
+    }
+
+    /* Checkmark gradient circle */
+    .check-circle {
+      background: linear-gradient(145deg, #2dd4f0 0%, #0ea5e9 40%, #0369a1 100%);
+      box-shadow: 0 4px 14px rgba(2,132,199,0.45);
+    }
+
+    /* Mobile nav overlay */
+    #mobileNav {
+      display: none;
+    }
+    #mobileNav.open {
+      display: flex;
+    }
+
+    /* Timeline boxes */
+    .timeline-box-rounded {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .timeline-box-square {
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    /* ── Scroll-reveal base (transform+opacity only = GPU composited) ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Stagger delays for feature list */
+    .reveal-d1 { transition-delay: 0.05s; }
+    .reveal-d2 { transition-delay: 0.18s; }
+    .reveal-d3 { transition-delay: 0.31s; }
+
+    /* Pulse glow on CTA button */
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 7px 0 #01528a, 0 8px 16px rgba(2,132,199,0.35); }
+      50%       { box-shadow: 0 7px 0 #01528a, 0 8px 32px rgba(2,200,240,0.65); }
+    }
+    .cta-btn {
+      animation: ctaPulse 2.6s ease-in-out infinite;
+    }
+
+    /* Floating animation for timeline grid */
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-4px); }
+    }
+    .timeline-float {
+      animation: floatUp 3.5s ease-in-out infinite;
+    }
+
+    /* Respect reduced-motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-left, .reveal-right {
+        opacity: 1; transform: none; transition: none;
+      }
+      .cta-btn { animation: none; }
+      .timeline-float { animation: none; }
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden" style="background:#eef2f7">
+  <!-- ──────────────────────────────────────────
+       PAGE WRAPPER  (centered, max 430 px)
+       — on tablet/desktop: card centered in page
+  ─────────────────────────────────────────── -->
+  <div class="w-full max-w-[430px] mx-auto relative bg-white min-h-screen" style="box-shadow: 0 0 40px rgba(13,36,97,0.10)">
+
+    <!-- ══════════════════════════════════════
+         HEADER
+    ═══════════════════════════════════════ -->
+    <header class="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100 bg-white relative z-10 reveal">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="images/logo.svg" width="40" height="42" alt="QuickPayly shield logo" />
+        <div class="leading-none" style="color:#0d2461">
+          <span class="text-[1.25rem] font-bold tracking-wide">QUICK</span><span class="text-[1.25rem] font-black tracking-wide">PAYLY</span>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" aria-label="Open menu" class="flex flex-col gap-[5px] p-2">
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+        <span class="block w-7 h-[3px] bg-gray-800 rounded-full"></span>
+      </button>
+    </header>
+
+    <!-- ══════════════════════════════════════
+         MOBILE NAV OVERLAY
+    ═══════════════════════════════════════ -->
+    <div id="mobileNav" class="fixed inset-0 z-50 flex-col" style="background:#0d2461">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-white/20">
+        <div class="flex items-center gap-2">
+          <img src="images/logo-white.svg" width="36" height="38" alt="QuickPayly logo white" />
+          <span class="text-white text-xl font-black">QUICKPAYLY</span>
+        </div>
+        <button id="closeNav" class="text-white text-4xl leading-none">&times;</button>
+      </div>
+      <nav class="flex flex-col items-center justify-center flex-1 gap-8">
+        <a href="#" class="text-white text-2xl font-bold hover:text-cyan-300 transition-colors">Home</a>
+        <a href="#" class="text-white text-2xl font-bold hover:text-cyan-300 transition-colors">Loans</a>
+        <a href="#" class="text-white text-2xl font-bold hover:text-cyan-300 transition-colors">About Us</a>
+        <a href="#" class="text-white text-2xl font-bold hover:text-cyan-300 transition-colors">Contact</a>
+        <a href="https://app.quickpayly.com/offer" class="cta-btn text-white font-black italic text-lg px-8 py-4 rounded-full mt-4 inline-block text-center">
+          SEE MY OFFER
+        </a>
+      </nav>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="relative px-4 sm:px-6 pt-6 sm:pt-8 pb-4 overflow-hidden">
+
+      <!-- Watermark: big upward arrow (top-right) -->
+      <div class="absolute -top-2 right-0 pointer-events-none select-none" style="opacity:0.055">
+        <img src="images/watermark-arrow.svg" width="150" height="195" alt="" />
+      </div>
+
+      <!-- Watermark: house outline (bottom-left) -->
+      <div class="absolute bottom-4 -left-5 pointer-events-none select-none" style="opacity:0.045">
+        <img src="images/watermark-house.svg" width="130" height="130" alt="" />
+      </div>
+
+      <!-- Heading -->
+      <h1 class="reveal font-black leading-[1.1] mb-3 relative z-10" style="color:#0d2461; font-size:clamp(2rem,9vw,2.5rem)">
+        Find the Loan<br>That Fits<br>Your Life
+      </h1>
+
+      <!-- Sub-heading -->
+      <p class="reveal reveal-d1 font-bold mb-5 leading-snug relative z-10" style="color:#0d2461; font-size:clamp(0.85rem,3.5vw,1rem)">
+        Join 1252+ people who found their perfect match today!
+      </p>
+
+      <!-- CTA + Timeline -->
+      <!-- On screens < 360px: stack vertically. On normal mobile: side by side -->
+      <div class="flex flex-col min-[360px]:flex-row items-start gap-4 relative z-10">
+
+        <!-- Left column: Button + SSL -->
+        <div class="reveal-left flex flex-col items-start gap-3 w-full min-[360px]:w-[46%]" style="padding-top: 2.5rem">
+          <a href="https://app.quickpayly.com/offer" class="cta-btn text-white font-black italic rounded-full w-full text-center py-4 sm:py-5 block" style="font-size:clamp(0.95rem,5vw,1.2rem); letter-spacing:0.02em">
+            SEE MY OFFER
+          </a>
+
+          <!-- SSL badge -->
+          <div class="flex items-center gap-2">
+            <img src="images/ssl-icon.svg" width="34" height="34" alt="SSL" />
+            <span class="text-gray-500 font-semibold" style="font-size:clamp(0.7rem,3vw,0.82rem)">Secure SSL Encryption</span>
+          </div>
+        </div>
+
+        <!-- Right column: Timeline -->
+        <div class="reveal-right timeline-float flex-1 w-full">
+          <p class="text-[11px] font-bold text-left mb-2" style="color:#0d2461">Track in Real Time</p>
+          <div class="grid grid-cols-2" style="gap: 6px">
+            <!-- 11:00am Inquiry Received – light -->
+            <div class="timeline-box-square text-center flex flex-col items-center justify-center gap-1" style="background:#c8e8f8; aspect-ratio:1/1">
+              <p class="font-black leading-none" style="color:#0d2461; font-size:clamp(0.82rem,3.8vw,1rem)">11:00am</p>
+              <p class="font-semibold leading-tight" style="color:#0d2461; font-size:clamp(0.58rem,2.4vw,0.68rem)">Inquiry<br>Received</p>
+            </div>
+            <!-- 11:48am Submitted – dark -->
+            <div class="timeline-box-rounded text-center flex flex-col items-center justify-center gap-1" style="background:#0d2461; aspect-ratio:1/1">
+              <p class="font-black text-white leading-none" style="font-size:clamp(0.82rem,3.8vw,1rem)">11:48am</p>
+              <p class="font-semibold text-white leading-tight" style="font-size:clamp(0.58rem,2.4vw,0.68rem)">Submitted</p>
+            </div>
+            <!-- 6:58pm Approved – dark -->
+            <div class="timeline-box-rounded text-center flex flex-col items-center justify-center gap-1" style="background:#0d2461; aspect-ratio:1/1">
+              <p class="font-black text-white leading-none" style="font-size:clamp(0.82rem,3.8vw,1rem)">6:58pm</p>
+              <p class="font-semibold text-white leading-tight" style="font-size:clamp(0.58rem,2.4vw,0.68rem)">Approved</p>
+            </div>
+            <!-- 8:15pm Settled – light -->
+            <div class="timeline-box-square text-center flex flex-col items-center justify-center gap-1" style="background:#c8e8f8; aspect-ratio:1/1">
+              <p class="font-black leading-none" style="color:#0d2461; font-size:clamp(0.82rem,3.8vw,1rem)">8:15pm</p>
+              <p class="font-semibold leading-tight" style="color:#0d2461; font-size:clamp(0.58rem,2.4vw,0.68rem)">Settled</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FEATURES / BENEFITS
+    ═══════════════════════════════════════ -->
+    <section class="px-4 sm:px-6 py-6 sm:py-8 relative overflow-hidden">
+
+      <!-- Watermark: dollar coin (right) -->
+      <div class="absolute top-3 right-3 pointer-events-none select-none" style="opacity:0.055">
+        <img src="images/watermark-dollar.svg" width="95" height="95" alt="" />
+      </div>
+
+      <!-- Watermark: credit card (left-bottom) -->
+      <div class="absolute -bottom-2 -left-3 pointer-events-none select-none" style="opacity:0.045">
+        <img src="images/watermark-card.svg" width="100" height="68" alt="" />
+      </div>
+
+      <div class="space-y-5 relative z-10">
+        <!-- Item 1 -->
+        <div class="reveal reveal-d1 flex items-center gap-4">
+          <img src="images/check-icon.svg" width="52" height="52" alt="check" class="flex-shrink-0" />
+          <span class="font-bold italic" style="color:#0d2461; font-size:clamp(0.95rem,4.5vw,1.15rem)">No prepayment penalties</span>
+        </div>
+        <!-- Item 2 -->
+        <div class="reveal reveal-d2 flex items-center gap-4">
+          <img src="images/check-icon.svg" width="52" height="52" alt="check" class="flex-shrink-0" />
+          <span class="font-bold italic" style="color:#0d2461; font-size:clamp(0.95rem,4.5vw,1.15rem)">APR from 4.99% to 23.99%</span>
+        </div>
+        <!-- Item 3 -->
+        <div class="reveal reveal-d3 flex items-center gap-4">
+          <img src="images/check-icon.svg" width="52" height="52" alt="check" class="flex-shrink-0" />
+          <span class="font-bold italic" style="color:#0d2461; font-size:clamp(0.95rem,4.5vw,1.15rem)">Flexible terms: 6 – 72 months</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="px-4 sm:px-6 py-4 sm:py-5">
+
+      <!-- Card: avatars + Why Choose Us -->
+      <div class="reveal bg-white rounded-2xl shadow-lg border border-gray-100 px-4 py-5">
+        <div class="flex items-center justify-between">
+          <!-- Avatar Sarah: để thay ảnh, đổi src thành images/sarah.jpg (hoặc .png) -->
+          <div class="w-[76px] h-[76px] rounded-full border-4 border-gray-100 shadow-md overflow-hidden flex-shrink-0">
+            <img src="images/sarah.svg" alt="Sarah" class="w-full h-full object-cover" />
+          </div>
+          <p class="font-bold text-center px-3 leading-snug" style="color:#0d2461; font-size:clamp(0.85rem,3.8vw,1rem)">
+            Why Choose Us?
+          </p>
+          <!-- Avatar Marcus: để thay ảnh, đổi src thành images/marcus.jpg (hoặc .png) -->
+          <div class="w-[76px] h-[76px] rounded-full border-4 border-gray-100 shadow-md overflow-hidden flex-shrink-0">
+            <img src="images/marcus.svg" alt="Marcus" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Names & reviews (below card) -->
+      <div class="reveal reveal-d1 grid grid-cols-2 gap-4 mt-4">
+        <div>
+          <p class="font-bold text-center mb-2" style="color:#0d2461; font-size:clamp(0.75rem,3.2vw,0.85rem)">Sarah (Office Clerk)</p>
+          <p class="text-center text-gray-500 leading-relaxed" style="font-size:clamp(0.65rem,2.8vw,0.75rem)">
+            I was terrified of my credit score dropping just by checking. Tried this on a whim – no hard pull, no drama. Got my $3k by the next morning. Total lifesaver for my car repairs!
+          </p>
+        </div>
+        <div>
+          <p class="font-bold text-center mb-2" style="color:#0d2461; font-size:clamp(0.75rem,3.2vw,0.85rem)">Marcus (Taxi Driver)</p>
+          <p class="text-center text-gray-500 leading-relaxed" style="font-size:clamp(0.65rem,2.8vw,0.75rem)">
+            Solid experience. No BS, no hidden fees. I like that they show you the numbers upfront before you commit. Helped me kill my credit card debt without the bank runaround. 10/10.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTACT BAR
+    ═══════════════════════════════════════ -->
+    <div class="reveal px-4 sm:px-6 pt-5 pb-4">
+      <div class="flex flex-wrap items-center justify-between gap-3 px-4 sm:px-5 py-4 rounded-2xl" style="background:#0d2461">
+        <a href="mailto:infor@quickpayly.com" class="bg-white font-bold px-5 py-2.5 rounded-full text-sm flex-shrink-0 inline-block" style="color:#0d2461">
+          Contact us
+        </a>
+        <span class="text-white italic font-semibold break-all" style="font-size:clamp(0.75rem,3.5vw,0.9rem)">
+          infor@quickpayly.com
+        </span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         DISCLAIMER
+    ═══════════════════════════════════════ -->
+    <div class="px-4 sm:px-6 pb-8 pt-1">
+      <p class="text-center leading-relaxed" style="color:#0d2461; font-size:clamp(0.65rem,2.8vw,0.75rem)">
+        <strong>Disclaimer:</strong> <em>Rates vary by lender and applicant qualifications. Not all applicants will qualify for the lowest rates.</em>
+      </p>
+    </div>
+
+  </div><!-- /page wrapper -->
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════ -->
+  <script>
+
+    // Smooth CTA button press feedback
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.style.transition = 'transform 0.1s, box-shadow 0.1s';
+      });
+    });
+
+    // ── Intersection Observer scroll reveal ──
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fire once only
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── Animated counter for "1252+" ──
+    function animateCounter(el, target, duration) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        start = Math.min(start + step, target);
+        el.textContent = 'Join ' + Math.floor(start) + '+ people who found their perfect match today!';
+        if (start >= target) clearInterval(timer);
+      }, 16);
+    }
+    const subheading = document.querySelector('.reveal.font-bold');
+    if (subheading) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          animateCounter(subheading, 1252, 1200);
+          counterObserver.disconnect();
+        }
+      }, { threshold: 0.5 });
+      counterObserver.observe(subheading);
+    }
+  </script>
+</body>
+</html>
