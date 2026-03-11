@@ -58,10 +58,10 @@
     #popupBox {
       position:relative;
       width:100%;
-      max-width:min(98vw,480px);
+      max-width:min(94vw,480px);
       background:#0d2461;
       border-radius:20px;
-      padding:28px 24px 28px;
+      padding:24px 16px 22px;
       box-shadow:0 20px 60px rgba(0,0,0,0.45);
     }
     #popupClose {
@@ -95,22 +95,22 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:14px;
-      margin-bottom:22px;
-      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+      flex-wrap:nowrap;
     }
     .popup-btn {
       background:#39ff6e;
       color:#0d2461;
       font-weight:800;
-      font-size:clamp(0.95rem,3.5vw,1.15rem);
+      font-size:clamp(0.72rem,2.8vw,1.05rem);
       border:none;
       border-radius:50px;
-      padding:16px 24px;
+      padding:10px 14px;
       cursor:pointer;
-      flex:1;
-      min-width:120px;
-      min-height:80px;
+      flex:1 1 0;
+      min-width:0;
+      min-height:48px;
       text-align:center;
       text-decoration:none;
       display:flex;
@@ -118,23 +118,24 @@
       justify-content:center;
       transition:filter 0.15s, transform 0.12s;
       box-shadow:0 4px 16px rgba(57,255,110,0.35);
-      line-height:1.2;
+      line-height:1.25;
     }
     .popup-btn:hover { filter:brightness(1.08); transform:translateY(-2px); }
     .popup-btn:active { transform:translateY(1px); }
-    .popup-or { color:white; font-weight:700; font-size:1rem; flex-shrink:0; }
+    .popup-or { color:white; font-weight:700; font-size:clamp(0.8rem,2.5vw,1rem); flex-shrink:0; }
     .popup-badges {
       display:flex;
       justify-content:center;
-      gap:24px;
-      flex-wrap:wrap;
+      gap:20px;
+      flex-wrap:nowrap;
+      align-items:center;
     }
     .popup-badge {
       display:flex;
       align-items:center;
-      gap:8px;
+      gap:6px;
       color:rgba(255,255,255,0.80);
-      font-size:clamp(0.72rem,2.5vw,0.82rem);
+      font-size:clamp(0.6rem,2.2vw,0.82rem);
       font-weight:600;
     }
     .popup-badge svg { flex-shrink:0; }
